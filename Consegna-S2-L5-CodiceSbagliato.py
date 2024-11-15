@@ -18,7 +18,7 @@ def assistente_virtuale(comando):
         risposta = "La data di oggi è " + oggi.strftime("%d/%m/%Y")
     
     elif comando == lista_domande[1]:        
-        ora_attuale = datetime.datetime.now().time() # Metodo corretto per chiamare il metodo .no() della classe .datetime del modulo .datetime + utilizo di .time() per indicare SOLO l'ora.          
+        ora_attuale = datetime.datetime.now().time() # Metodo corretto per chiamare il metodo .now() della classe .datetime del modulo .datetime + utilizo di .time() per indicare SOLO l'ora.          
         risposta = "L'ora attuale è " + ora_attuale.strftime("%H:%M") #Correzione segno strano tra %H e %M
     
     elif comando == lista_domande[2]:        
@@ -30,7 +30,7 @@ def assistente_virtuale(comando):
     return risposta 
 
 while True:  # Mancavano i due punti
-    comando_utente = input("\n\n[Domanda]: ") # Modificato in "Domanda" per preferenza stilistica.
+    comando_utente = input("\n\n[Domanda]: ") # Modificato in "[Domanda]" per preferenza stilistica.
     
     if comando_utente.lower() == "esci":        
         print("\nArrivederci!\n")        
